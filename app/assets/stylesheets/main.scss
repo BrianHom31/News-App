@@ -1,3 +1,37 @@
 body {
   text-align: center;
 }
+
+
+.navbar {
+  background: lightgray;
+}
+
+
+.logo {
+  font-size: 35px;
+  border-radius: 100%;
+  background: lightblue;
+  height: 100px;
+  line-height: 65px;
+}
+
+
+.links {
+  padding: 40px;
+}
+
+
+.links a {
+  list-style: none;
+  text-decoration: none;
+  padding: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+
+.links a:hover {
+  color: sandybrown;
+  font-weight: bold;
+}

@@ -12,31 +12,35 @@
 
   <body>
 
-  <div class="container-fluid">
+
+    <div class="container-fluid">
+      <nav class="navbar">
+         <div class="navbar-header">
+           <a class="navbar-brand logo" href="/">HeadLiners</a>
+         </div>
+
+       <div class="links pull-left">
+         |<%= link_to ("Users"), users_path %>|
+         <%= link_to ("Newsfeeds"), newsfeeds_path %>|
+       </div>
 
 
-  <nav>
-    <div class="links pull-right">
-    <% if  (user_signed_in?)%>
-          <%= link_to "Sign out", { :action => "destroy",  :controller=> "devise/sessions"}, method: :delete %>
-    <% else %>
-          <%= link_to "Sign In", new_user_session_path %>
-          <%= link_to "Sign Up", new_user_registration_path %>
-    <% end %>
+        <div class="links pull-right">
+        <% if  (user_signed_in?)%>
+              <%= link_to "Sign out", { :action => "destroy",  :controller=> "devise/sessions"}, method: :delete %>
+        <% else %>
+              <%= link_to "Sign In", new_user_session_path %>
+              <%= link_to "Sign Up", new_user_registration_path %>
+        <% end %>
+        </div>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      </nav>
     </div>
-  </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-
-
-    <%= yield %>
-
-
-
-
-  </div>
+  <%= yield %>
 
   </body>
 </html>
